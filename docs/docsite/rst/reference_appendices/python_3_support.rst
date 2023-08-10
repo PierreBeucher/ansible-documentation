@@ -68,6 +68,12 @@ Using Python 3 on the managed machines with commands and playbooks
     $ ansible localhost-py3 -m ping
     $ ansible-playbook sample-playbook.yml
 
+* If you want to use the first Python found on ``PATH`` or Python interpreter path can't be known in advance, you can use ``/usr/bin/env python`` such as:
+
+.. code-block:: shell
+
+    ansible_python_interpreter="/usr/bin/env python"
+
 
 Note that you can also use the `-e` command line option to manually
 set the python interpreter when you run a command.   This can be useful if you want to test whether
